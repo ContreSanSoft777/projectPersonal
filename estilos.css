@@ -170,6 +170,8 @@ nav ul li a:hover::after {
   font-size: 1.1rem;
 }
 
+
+
 /* ------------------------------
    PROJECTS SECTION
 ------------------------------ */
@@ -185,9 +187,132 @@ nav ul li a:hover::after {
   text-shadow: 0 0 10px #00ffff;
 }
 
+.project h3 {
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+.project p {
+  color: #0f0f0f;
+}
+
+
+/* ======= GALERÍA DE PROYECTOS ======= */
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
+  justify-content: center; /* Centra los proyectos horizontalmente */
+  gap: 2rem; /* Espaciado entre proyectos */
+  margin-top: 2rem;
+}
+
+.project {
+  width: 300px; /* Tamaño fijo del contenedor del proyecto */
+  text-align: center; /* Centra el texto y la imagen */
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project img {
+  width: 100%; /* Ajusta la imagen al ancho del contenedor */
+  max-width: 250px; /* Tamaño máximo (ajústalo según te guste) */
+  height: auto; /* Mantiene la proporción */
+  display: block;
+  margin: 0 auto 1rem; /* Centra la imagen y da espacio inferior */
+  border-radius: 8px; /* Bordes redondeados */
+}
+/* ------------------------------
+   CONTACT SECTION
+------------------------------ */
+#contact {
+  padding: 70px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.85);
+  border-top: 2px solid #00ffcc;
+  border-bottom: 2px solid #00ffcc;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.5);
+}
+
+#contact h2 {
+  color: #00ffff;
+  font-size: 2.2rem;
+  text-shadow: 0 0 12px #00ffff;
+  margin-bottom: 15px;
+}
+
+.contact-intro {
+  color: #b8fff4;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #00ffcc;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #00ffff;
+  font-weight: bold;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.neon-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: linear-gradient(90deg, #00ffcc, #00ffff);
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+.neon-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px #00ffff, 0 0 60px #00ffcc;
 }
