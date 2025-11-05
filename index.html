@@ -1,78 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-     content="width=device-width, 
-     initial-scale=1.0">
-    <title>Personal Portafolio</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sebastian Contreras | Web Developer Portfolio</title>
+
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="estilos.css" />
 </head>
+
 <body>
-  <!-- content here -->  
-<header>
-        <h1>My portafolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="About">
-        <h2>About me</h2>
-        <p>Hello, I am Sebastian contreras, a web developer who creates
-            innovate solutions and ideas. </p>
-    </section>
+  <!-- ======= HEADER / NAV ======= -->
+  <header>
+    <h1>Sebastian Contreras</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="Projects">
-        <h2>Projects</h2>
-        <div class="gallery"></div>
-        <div class="Projects"></div>
-        <img src="imagen1_png.jpg" alt="Smart task Organizer(Python proyect)">
-        <p>The Smart Task Organizer is a productivity
-             application built using Python
-              and SQLite. It allows users to manage 
-              daily tasks through a simple command-line
-               or graphical interface. The program
-                categorizes tasks by priority and
-                 due date, offering automated
-                  reminders using a scheduling
-                   library. A key feature is its 
-                   integration with a natural language parser, allowing users to add tasks using plain English (e.g., “Remind me to submit the report tomorrow at 10 AM”). This project focuses on data structures, file handling, and API integration, helping developers strengthen their understanding of backend
-             logic and user experience design.</p>
+  <!-- ======= HERO SECTION ======= -->
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Hi, I'm <span>Sebastian</span> 👋</h2>
+      <p>I'm a <strong>Web Developer</strong> who builds creative and efficient digital experiences using modern technologies.</p>
+      <a href="#projects" class="btn">View My Work</a>
     </div>
-    <div class="project">
-        <img src="imagen2_png.jpg" alt="proyect2">
-        <p>The Interactive Web Portfolio is a personal 
-            website developed with React.js, HTML5,
-             and CSS3, designed to showcase a 
-             programmer’s skills and projects.
-              It features dynamic components, 
-              smooth animations, and a contact form
-               that connects to an email API.
-                The portfolio also includes a
-                 project gallery powered by a
-                  JSON-based backend, enabling easy updates without altering the core code. This project emphasizes front-end development, responsive design, and API connectivity, demonstrating how to create modern, user-friendly web applications 
-            that reflect professional coding practices.</p>
+  </section>
+
+  <!-- ======= ABOUT SECTION ======= -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm <strong>Sebastian Contreras</strong>, a passionate web developer who enjoys solving real-world problems through technology.
+      I specialize in front-end and back-end development, creating interactive, scalable, and user-centered web applications.
+    </p>
+  </section>
+
+  <!-- ======= PROJECTS SECTION ======= -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="gallery">
+      <!-- Project 1 -->
+      <div class="project">
+        <img src="imagen1_png.jpg" alt="Smart Task Organizer project preview" />
+        <h3>Smart Task Organizer (Python)</h3>
+        <p>
+          A productivity app built using <strong>Python</strong> and <strong>SQLite</strong> that helps users manage their daily tasks through
+          natural language commands (e.g., “Remind me to submit the report tomorrow at 10 AM”). It focuses on backend logic, scheduling,
+          and user experience design.
+        </p>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project">
+        <img src="imagen2_png.jpg" alt="Interactive Web Portfolio project preview" />
+        <h3>Interactive Web Portfolio (React.js)</h3>
+        <p>
+          A personal website built with <strong>React.js</strong>, <strong>HTML5</strong>, and <strong>CSS3</strong> featuring dynamic
+          components, smooth animations, and an API-connected contact form. It demonstrates responsive design and modern front-end
+          development techniques.
+        </p>
+      </div>
+
+      <!-- You can duplicate the .project divs below for more projects -->
+      <!-- <div class="project">
+           <img src="imagen3.jpg" alt="Project 3 preview">
+           <h3>Project Title</h3>
+           <p>Short description of the project...</p>
+         </div> -->
     </div>
-    <!--More proyects here-->
-    </div>
-    </section>
-    <section id="Contact">
-        <h2>Contact Me</h2>
-        <form action="submit_form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+  </section>
+
+  <!-- ======= CONTACT SECTION ======= -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="submit_form.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <input type="submit" value="Send Message" />
+    </form>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <p>© 2025 Sebastian Contreras. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>

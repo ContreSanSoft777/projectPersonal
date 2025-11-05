@@ -1,86 +1,193 @@
-body{
-    font: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+/* ------------------------------
+   RESET & BASE
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header{
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-nav ul{
-    list-style: none;
-    padding: 0;
-}
-nav ul li{
-    display: inline;
-    margin: 0 10px;
-}
-nav ul li a{
-    color: #fff;
-    text-decoration: none;
+body {
+  font-family: 'Share Tech Mono', monospace;
+  color: #00ffcc;
+  background: #000;
+  background-image: url('binario.jpg'); /* 🔹 Pon tu imagen aquí */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.6);
 }
 
-#about{
-    padding: 20px;
-    background: #f4f4f4;
+/* Overlay oscuro para legibilidad */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: -1;
+}
 
+/* ------------------------------
+   HEADER
+------------------------------ */
+header {
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 2px solid #00ffcc;
+  padding: 25px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0 20px #00ffcc;
 }
-#about h2{
-    margin-top: 0;
+
+header h1 {
+  color: #00ffcc;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: glow 2s infinite alternate;
 }
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+
+/* Efecto de brillo pulsante */
+@keyframes glow {
+  from { text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc; }
+  to { text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffcc; }
 }
-.project{
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 300px;
-    text-align: center;
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
 }
-.project img{
-    max-width: 100%;
-    height: auto;
+
+nav ul li a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s, text-shadow 0.3s;
 }
-contact {
-    padding: 20px;
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #00ffff;
+  transition: width 0.3s;
 }
-form {
-    display: flex;
-    flex-direction: column;
+
+nav ul li a:hover {
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
 }
-form label {
-    margin-bottom: 5px;
+
+nav ul li a:hover::after {
+  width: 100%;
 }
-form input, form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+
+/* ------------------------------
+   HERO SECTION
+------------------------------ */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  text-align: center;
+  color: #00ffcc;
+  background: rgba(0, 0, 0, 0.7);
 }
-form input[type="submit"] {
-    background: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+
+.hero-content {
+  max-width: 700px;
 }
-@media (max-width: 600px) {
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-    .project {
-        width: 100%;
-    }
-    nav ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+
+#hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+#hero span {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  color: #b8fff4;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  color: #000;
+  background: #00ffcc;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+  box-shadow: 0 0 20px #00ffcc;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #00ffff;
+  box-shadow: 0 0 30px #00ffff, 0 0 50px #00ffcc;
+  transform: scale(1.05);
+}
+
+/* ------------------------------
+   ABOUT SECTION
+------------------------------ */
+#about {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #00ffcc;
+  border-radius: 8px;
+  box-shadow: 0 0 25px #00ffcc;
+}
+
+#about h2 {
+  color: #00ffff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#about p {
+  color: #b8fff4;
+  font-size: 1.1rem;
+}
+
+/* ------------------------------
+   PROJECTS SECTION
+------------------------------ */
+#projects {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#projects h2 {
+  color: #00ffff;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
 }
